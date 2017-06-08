@@ -12,6 +12,8 @@ Soha King
 
 let config=require('./config');
 let axios=require('axios');
+let http=require('http');
+let https=require('https');
 
 let api=function (key,secret,interfaceUrl){
 	config.oiinhand.auth.key=key;
