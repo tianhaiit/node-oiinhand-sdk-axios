@@ -4,9 +4,9 @@
 
 十分简单，只需要以下步骤
 
-	$ npm install oiinhand-api
+	$ npm install oiinhand-sdk-axios
 
-    var OIHAPI=require('oiinhand-api');
+    var OIHAPI=require('oiinhand-sdk-axios');
     var api=new OIHAPI('$apikey$','$apisecret$');
 
 这是最简单的开始使用方法。在创建 OIHAPI 的实例时你还可以传入第三个参数，用于自行设置 OI in Hand 的 API 地址。例如：
