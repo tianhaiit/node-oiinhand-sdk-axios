@@ -1,0 +1,21 @@
+{
+  "name": "oiinhand-sdk-axios",
+  "version": "0.0.4",
+  "description": "The Node.js SDK for OI in Hand API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tianhaiit/node-oiinhand-sdk-axios.git"
+  },
+  "keywords": [
+    "oiinhand"
+  ],
+  "author": "Soha King",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}
