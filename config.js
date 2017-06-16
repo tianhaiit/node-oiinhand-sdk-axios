@@ -18,7 +18,8 @@ module.exports={
 			'Connection': 'keep-alive',
 			'Content-Type': 'charset=UTF-8',
 			'Pragma': 'no-cache',
-			'User-Agent': 'TrueMoe_Using-FRC-API_Module/1.0'
+			'User-Agent': 'OIH-Nodejs-SDK-axios/1.0',
+			'Content-Type': 'application/x-www-form-urlencoded'
 		},
 		forever: true
 	},
