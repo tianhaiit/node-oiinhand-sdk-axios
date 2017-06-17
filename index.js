@@ -10,12 +10,12 @@ Soha King
 	http://soha.moe
 =============================*/
 
-let config=require('./config');
-let axios=require('axios');
-let http=require('http');
-let https=require('https');
+var config=require('./config');
+var axios=require('axios');
+var http=require('http');
+var https=require('https');
 
-let api=function (key,secret,interfaceUrl){
+var api=function (key,secret,interfaceUrl){
 	config.oiinhand.auth.key=key;
 	config.oiinhand.auth.secret=secret;
 	if(interfaceUrl){
