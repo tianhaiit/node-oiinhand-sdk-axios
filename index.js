@@ -38,6 +38,7 @@ var api=function (key,secret,interfaceUrl){
 	});
 	api.prototype.problem=new (require('./lib/problem'))(axiosInstance,config);
 	api.prototype.search=new (require('./lib/search'))(axiosInstance,config);
+	api.prototype.token=new (require('./lib/token'))(axiosInstance,config);
 }
 
 module.exports=api;
