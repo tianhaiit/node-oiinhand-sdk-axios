@@ -10,21 +10,21 @@ Soha King
 	http://soha.moe
 =============================*/
 
-var config=require('./config');
-var axios=require('axios');
-var http=require('http');
-var https=require('https');
+var config = require('./config');
+var axios = require('axios');
+var http = require('http');
+var https = require('https');
 
-var api=function (key,secret,interfaceUrl){
-	config.oiinhand.auth.key=key;
-	config.oiinhand.auth.secret=secret;
-	if(interfaceUrl){
-		config.oiinhand.interfaceUrl=interfaceUrl;
+var OIHSDK = function (key, secret, interfaceUrl) {
+	config.oiinhand.auth.key = key;
+	config.oiinhand.auth.secret = secret;
+	if (interfaceUrl) {
+		config.oiinhand.interfaceUrl = interfaceUrl;
 	}
-	var axiosInstance=axios.create({
+	var axiosInstance = axios.create({
 		baseURL: config.oiinhand.interfaceUrl,
 		headers: config.request.header,
-		params:{
+		params: {
 			apikey: config.oiinhand.auth.key,
 			apisecret: config.oiinhand.auth.secret
 		},
@@ -36,9 +36,9 @@ var api=function (key,secret,interfaceUrl){
 			keepAlive: true
 		})
 	});
-	api.prototype.problem=new (require('./lib/problem'))(axiosInstance,config);
-	api.prototype.search=new (require('./lib/search'))(axiosInstance,config);
-	api.prototype.token=new (require('./lib/token'))(axiosInstance,config);
+	OIHSDK.prototype.problem = new (require('./lib/problem'))(axiosInstance, config);
+	OIHSDK.prototype.search = new (require('./lib/search'))(axiosInstance, config);
+	OIHSDK.prototype.token = new (require('./lib/token'))(axiosInstance, config);
 }
 
-module.exports=api;
+module.exports = OIHSDK;

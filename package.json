@@ -1,6 +1,6 @@
 {
   "name": "oiinhand-sdk-axios",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "The Node.js SDK for OI in Hand API",
   "main": "index.js",
   "scripts": {

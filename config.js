@@ -10,9 +10,9 @@ Soha King
 	http://soha.moe
 =============================*/
 
-module.exports={
+module.exports = {
 	request: {
-		header:  {
+		header: {
 			'Accept': 'application/json',
 			'Cache-Control': 'no-cache',
 			'Connection': 'keep-alive',
