@@ -13,7 +13,7 @@
   "keywords": [
     "oiinhand"
   ],
-  "author": "Soha King",
+  "author": "Soha Jin <soha@lohu.info>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2"
