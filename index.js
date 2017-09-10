@@ -39,6 +39,8 @@ var OIHSDK = function (key, secret, interfaceUrl) {
 	OIHSDK.prototype.problem = new (require('./lib/problem'))(axiosInstance, config);
 	OIHSDK.prototype.search = new (require('./lib/search'))(axiosInstance, config);
 	OIHSDK.prototype.token = new (require('./lib/token'))(axiosInstance, config);
+
+	OIHSDK.prototype.instance = axiosInstance;
 }
 
 module.exports = OIHSDK;
