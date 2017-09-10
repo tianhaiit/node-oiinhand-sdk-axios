@@ -21,13 +21,17 @@ var OIHSDK = function (key, secret, interfaceUrl) {
 	if (interfaceUrl) {
 		config.oiinhand.interfaceUrl = interfaceUrl;
 	}
+	let params={};
+	if(key){
+		params.apikey=config.oiinhand.auth.key;
+	}
+	if(secret){
+		params.apisecret=config.oiinhand.auth.secret;
+	}
 	var axiosInstance = axios.create({
 		baseURL: config.oiinhand.interfaceUrl,
 		headers: config.request.header,
-		params: {
-			apikey: config.oiinhand.auth.key,
-			apisecret: config.oiinhand.auth.secret
-		},
+		params: params,
 		responseType: 'json',
 		httpAgent: new http.Agent({
 			keepAlive: true
